@@ -3,7 +3,15 @@ include_once("Viaje.php");
 include_once("Responsable.php");
 include_once("Terminal.php");
 include_once("Empresa.php");
-
+/*Implementar un script TestTermial en el cual:
+1. Se crea una colección con un mínimo de 2 empresas, ejemplo Flecha Bus y Via Bariloche.
+2. A cada empresa se le incorporan 2 instancias de la clase viaje.
+3. Se crea un objeto Terminal con la colección de empresas creadas en el pnto1.
+4. Invocar y visualizar el resultado del método ventaAutomatica con cantidad de asientos
+3 y como destino alguno de los destinos de viaje creados en 2.
+5. Invocar y visualizar el resultado del método empresaMayorRecaudacion.
+6. Invocar y visualizar el resultado del método responsableViaje correspondiente a uno de los
+números de viajes del punto 2.*/
 
 $empresas=[
     new Empresa("1","Via Bariloche",[]),
@@ -26,14 +34,21 @@ $viajes2=[
 $destinos3= new Viaje("Buenos Aires","08:00","14:00",3600,"22/04/2023","8",$responsable3),
 $destinos4= new Viaje("Bariloche","06:00","13:30",2850,"23/04/2023","10",$responsable4)
 ];
-///ahora lo pasamos a empres
+///ahora lo pasamos a empresa
 $empresas[0]->setViajes($viajes1);
 $empresas[1]->setViajes($viajes2);
 
+//instanciamos terminal
+$terminal= new Terminal("Terminal de Mendoza","Mendoza",$empresas);
+
+//Invocar y visualizar el resultado del método ventaAutomatica con cantidad de asientos
+//3 y como destino alguno de los destinos de viaje creados en 2.
+echo $terminal->ventaAutomatica(3,"26/05/2023","Bariloche",$empresas[0]->getViajes());
+
 
 ///
-echo $destinos1;
-echo $responsable1;
-print_r ($viajes1);
-print_r($empresas);
+//echo $destinos1;
+//echo $responsable1;
+//print_r ($viajes1);
+//print_r($empresas);
 
