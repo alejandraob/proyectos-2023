@@ -112,20 +112,16 @@ class Empresa {
     public function registrarVenta($colCodigosBici, $objCliente) {
         $colVentas= $this->getColeccionVentas();
         $venta = new Venta(count($colVentas) + 1, date("Y-m-d"), $objCliente, array(), 0);
-        $i=0;
-        $colCodigosBici = $this->getColeccionBicicletas();
-        $bandera = count($colCodigosBici);
-        while ($i < $bandera) {
-            $bicicleta = $this->retornarBici($colCodigosBici[$i]->getCodigo());
-            if ($bicicleta != null && $bicicleta->getActiva()) {
+
+        $longitud = count($colCodigosBici);
+        for($i=0; $i<$longitud; $i++){
+            $bicicleta = $this->retornarBici($colCodigosBici[$i]);
+            if ($bicicleta != null) {
                 $venta->incorporarBicicleta($bicicleta);
             }
-            $i++;
         }
-        array_push($colVentas, $venta); //array_push($array, $valor1, $valor2...
-        $this->setColeccionVentas($colVentas);
+
         $importeFinal=$venta->getPrecioFinal();
-        
         return $importeFinal;
     }
       
@@ -181,5 +177,23 @@ class Empresa {
 }
 
 
-
+/*    public function registrarVenta($colCodigosBici, $objCliente) {
+        $colVentas= $this->getColeccionVentas();
+        $venta = new Venta(count($colVentas) + 1, date("Y-m-d"), $objCliente, array(), 0);
+        $i=0;
+        $colCodigosBici = $this->getColeccionBicicletas();
+        $bandera = count($colCodigosBici);
+        while ($i < $bandera) {
+            $bicicleta = $this->retornarBici($colCodigosBici[$i]->getCodigo());
+            if ($bicicleta != null && $bicicleta->getActiva()) {
+                $venta->incorporarBicicleta($bicicleta);
+            }
+            $i++;
+        }
+        array_push($colVentas, $venta); //array_push($array, $valor1, $valor2...
+        $this->setColeccionVentas($colVentas);
+        $importeFinal=$venta->getPrecioFinal();
+        
+        return $importeFinal;
+    } */
 ?>
