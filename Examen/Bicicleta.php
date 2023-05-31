@@ -104,7 +104,6 @@ public function darPrecioVenta(){
                "Año de Fabricación: " . $this->getAnioFabricacion() . "\n" .
                "Descripción: " . $this->getDescripcion() . "\n" .
                "Porcentaje: " . $this->getPorcentajeIncrementoAnual() . "%\n" .
-               "Precio Venta: " . $this->darPrecioVenta() . "\n" .
                "Activa: " . ($this->activa ? "Sí" : "No"). "\n";
     }
 }

@@ -95,15 +95,15 @@ class Venta {
     
     public function __toString() {
         $bicicletasStr = "";
-        foreach ($this->bicicletas as $bicicleta) {
+        foreach ($this->getBicicletas() as $bicicleta) {
             $bicicletasStr .= $bicicleta. "\n";
         }
         
-        return "Número: " . $this->numero . "\n" .
-               "Fecha: " . $this->fecha . "\n" .
-               "Cliente: " . $this->cliente. "\n" .
+        return "Número: " . $this->getNumero() . "\n" .
+               "Fecha: " . $this->getFecha() . "\n" .
+               "Cliente: \n" . $this->getCliente(). "\n" .
                "Bicicletas:\n" . $bicicletasStr .
-               "Precio Final: $" . $this->precioFinal. "\n";
+               "Precio Final: $" . $this->getPrecioFinal(). "\n";
     }
 }
 

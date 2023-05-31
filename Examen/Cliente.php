@@ -55,11 +55,11 @@ class Cliente {
     
     
     public function __toString() {
-        return "Nombre: " . $this->getNombre . "\n" .
-               "Apellido: " . $this->getApellido . "\n" .
-               "Baja: " . ($this->isBaja ? "Sí" : "No") . "\n" .
-               "Tipo de Documento: " . $this->getTipoDocumento . "\n" .
-               "Número de Documento: " . $this->getNumeroDocumento. "\n";
+        return "Nombre: " . $this->getNombre(). " " .
+               "Apellido: " . $this->getApellido(). "\n" .
+               "Baja: " . ($this->isBaja() ? "Sí" : "No") . "\n" .
+               "Tipo de Documento: " . $this->getTipoDocumento(). " " .
+               "Número de Documento: " . $this->getNumeroDocumento(). "\n";
     }
 }
 
