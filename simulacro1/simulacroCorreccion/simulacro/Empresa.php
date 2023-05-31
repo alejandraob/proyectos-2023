@@ -70,9 +70,9 @@ class Empresa
      * Implementar el método darViajeADestino($elDestino) que recibe por parámetro 
      * un destino junto a una cantidad de asientos y retorna una colección con 
      * todos los viajes disponibles a ese destino. 
-     * @param String $elDestino
+     * @param string $elDestino
      * @param int $cantAsientos
-     * @return Array
+     * @return array
      */
     public function darViajeADestino($elDestino, $cantAsientos)
     {
