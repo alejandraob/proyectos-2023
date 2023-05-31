@@ -103,7 +103,7 @@ class Venta {
                "Fecha: " . $this->fecha . "\n" .
                "Cliente: " . $this->cliente. "\n" .
                "Bicicletas:\n" . $bicicletasStr .
-               "Precio Final: $" . $this->precioFinal;
+               "Precio Final: $" . $this->precioFinal. "\n";
     }
 }
 

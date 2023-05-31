@@ -172,8 +172,8 @@ class Empresa {
             $ventasStr .= $venta . "\n";
         }
         
-        return "Denominación: " . $this->denominacion . "\n" .
-               "Dirección: " . $this->direccion . "\n" .
+        return "Denominación: " . $this->getDenominacion . "\n" .
+               "Dirección: " . $this->getDireccion . "\n" .
                "Clientes:\n" . $clientesStr .
                "Bicicletas:\n" . $bicicletasStr .
                "Ventas Realizadas:\n" . $ventasStr;

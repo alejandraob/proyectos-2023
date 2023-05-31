@@ -32,16 +32,16 @@ $objEmpresa = new Empresa("Alta Gama", "Av Argetina 123", array($objBici1, $objB
 $colCodigosBici1 = array(11, 12, 13);
 $resultado1 = $objEmpresa->registrarVenta($colCodigosBici1, $objCliente1);
 echo "Precio final de la venta 1: $" . $resultado1 . "\n";
-
+echo "\n";
 $colCodigosBici2 = array(12);
 $resultado2 = $objEmpresa->registrarVenta($colCodigosBici2, $objCliente2);
 echo "Precio final de la venta 2: $" . $resultado2 . "\n";
-
+echo "\n";
 $ventasCliente1 = $objEmpresa->retornarVentasXCliente("DNI", "12345678");
-
+echo "\n";
 $ventasCliente2 = $objEmpresa->retornarVentasXCliente("DNI", "23456789");
-
-echo $objEmpresa->__toString();
+echo "\n";
+echo $objEmpresa;
 
 
 
