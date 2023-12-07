@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Registro de Usuario</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/registroUser.css">
+
+</head>
+
+<body>
+    <!-- Barra de navegacion-->
+    <nav class="barra_navegacion" id="barra_navegacion">
+        <div class="logo">
+            <a href="index.html"><img src="img/logo.jpeg" width="90.5" height="90" alt="logo" id="logo" name="logo"></a>
+            <div class="menu_bar">
+                <ul class="menu">
+                    <li><a href="login.html">Categoria</a></li>
+                    <li><a href="contacto.html">Contacto</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div id="botonesmenu" name="botonesmenu">
+            <a href="carrito.html"><img src="img\icons8-carrito-de-compras-48.png" width="48" height="48" alt="carrito"
+                    id="carrito" name="carrito"></a>
+            <a href="login.html"><img src="img\icons8-usuario-64.png" width="48" height="48" alt="usuario" id="usuario"
+                    name="usuario"></a>
+        </div>
+    </nav>
+    <main>
+        <section class="info_banner">
+            <div class="banner-content">
+                <h1>Registro de Usuario</h1>
+            </div>
+        </section>
+
+        <section class="registro">
+            <!--Formulario de registro-->
+            <div class="registro-contenido" id="registroUser_contenido">
+                <form id="formulario">
+                    <div class="form-container">
+                        <div class="form-izquierda">
+                            <label>Nombre y Apellido</label>
+                            <input type="text" name="nombre" placeholder="Nombre" id="nombre">
+                            <label>Mail</label>
+                            <input type="email" name="email" placeholder="Email" id="email">
+                            <label>Contraseña</label>
+                            <input type="password" name="password" placeholder="Contraseña" id="password">
+                            <label>Confirmar Contraseña</label>
+                            <input type="password" name="password" placeholder="Contraseña" id="password">
+                            <label>Telefono</label>
+                            <input type="text" name="telefono" placeholder="Teléfono" id="celular">
+                            <label>Fecha de Nacimiento</label>
+                            <input type="date" name="fecha" placeholder="Fecha de Nacimiento" id="fecha">
+                        <div id="domicilio" class="contenedor-lugar">
+                            <div id="dom">
+                            <label>Domicilio</label>
+                            <input type="text" name="direccion" placeholder="Domicilio" id="direccion">
+                            </div>
+                            <div id="dom2">
+                            <label>Nro</label>
+                            <input type="text" name="nro" placeholder="Nro" id="nro">
+                            </div>
+                        </div>
+                        <div id="cont-depto" class="contenedor-lugar" >
+                            <div id="dep1">
+                            <label>Departamento</label>
+                            <input type="text" name="depto" placeholder="departamento" id="depto">
+                            </div>
+                            <div id="dep2">
+                            <label>Piso</label>
+                            <input type="text" name="piso" placeholder="piso" id="piso">
+                            </div>
+                        </div>
+                    <div>
+                            <label>Codigo Postal</label>
+                            <input type="text" name="codigopostal" placeholder="codigo postal" id="codigopostal">
+                            <label>Localidad</label>
+                            <input type="text" name="localidad" placeholder="localidad" id="localidad">
+                        </div>
+                        <div>
+                            <label>Provincia</label>
+                            <select id="privincia" >
+                                <option value="Buenos Aires">Buenos Aires</option>
+                                <option value="Catamarca">Catamarca</option>
+                                <option value="Chaco">Chaco</option>
+                                <option value="Chubut">Chubut</option>
+                                <option value="Córdoba">Córdoba</option>
+                                <option value="Corrientes">Corrientes</option>
+                                <option value="Entre Ríos">Entre Ríos</option>
+                                <option value="Formosa">Formosa</option>
+                                <option value="Jujuy">Jujuy</option>
+                                <option value="La Pampa">La Pampa</option>
+                                <option value="La Rioja">La Rioja</option>
+                                <option value="Mendoza">Mendoza</option>
+                                <option value="Misiones">Misiones</option>
+                                <option value="Neuquén">Neuquén</option>
+                                <option value="Río Negro"> Río Negro</option>
+                                <option value="Salta">Salta</option>
+                                <option value="San Juan">San Juan</option>
+                                <option value="San Luis">San Luis</option>
+                                <option value="Santa Cruz">San Cruz</option>
+                                <option value="Santa Fe"> Santa Fe</option>
+                                <option value="Santiago del Estero">Santiago del Estero</option>
+                                <option value="Tierra del Fuergo"> Tierra del Fuego</option>
+                                <option value="Tucumán">Tucumán</option>
+                            </select>
+                            <label>Pais</label>
+                            <input type="text" name="pais" placeholder="País" id="pais">
+
+                        </div>
+                    </div>
+                        <div class="form-derecha">
+
+                            <button type="submit">Enviar</button>
+                        </div>
+                    </div>
+                    <!--Re Captcha-->
+                    <div id="recaptcha">
+                    </div>
+                    <span id="errorReCaptcha" class="error-c"></span>
+                </form>
+            </div>
+
+        </section>
+    </main>
+
+
+
+</body>
+
+</html>
